@@ -1,0 +1,365 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    background-color: #333;
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+
+
+.navbar-nav .nav-link.active, .navbar-nav .show>.nav-link {
+    color: rgb(192, 192, 192) !important;
+}
+
+
+
+.navbar a:hover {
+    color: rgb(250, 248, 248);
+}
+
+.section {
+    padding: 20px;
+}
+
+.home {
+    height: 500px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#home {
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 500px;
+    animation: slideBackground 15s infinite;
+}
+
+@keyframes slideBackground {
+    0% {
+        background-image: url('../images/gallery2.png');
+    }
+
+    33% {
+        background-image: url('../images/sailage-bg.png');
+    }
+
+    66% {
+        background-image: url('../images/gallery2.png');
+    }
+
+    100% {
+        background-image: url('../images/Rectangle\ 3.png');
+    }
+}
+
+.welcome {
+    background-color: rgb(217, 217, 217, 0.6);
+    margin-top: 4% 3% 0;
+    width: 45%;
+    height: 70%;
+    box-sizing: border-box;
+}
+
+.welcome h1 {
+    font-size: 55px;
+    font-weight: 700;
+    padding: 7% 7% 0% 7%;
+}
+
+.welcome p {
+    font-size: 22px;
+    font-weight: 500;
+    color: #3E3C3D;
+    margin-top: -4%;
+    padding: 0% 7% 0% 7%;
+    font-weight: 500;
+}
+
+.btn {
+    Width: 250px;
+    Height: 60px;
+    border-radius: 10px;
+    color: white;
+    background-color: #3E3C3D;
+    font-size: 20px;
+    font-weight: 500;
+    margin-left: 7%;
+    text-decoration: none;
+    padding: 10px;
+}
+
+
+
+.about h2 {
+    text-align: center;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.about h3 {
+    font-size: 26px;
+    font-weight: 700;
+}
+
+.about p {
+    font-size: 21px;
+    font-weight: 400;
+}
+
+
+
+.brief p {
+    flex: 2;
+    margin-right: 20px;
+    margin-left: 40px;
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.brief-img {
+    flex: 1;
+    width: 500px;
+    height: 380px;
+    margin-left: 20px;
+    margin-top: 30px;
+}
+
+.brief h3 {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+
+
+.mission-text {
+    flex: 2;
+    order: 2;
+}
+
+.mission-img {
+    flex: 1;
+    width: 400px;
+    height: auto;
+    margin-right: 20px;
+}
+
+/* .mission-text h3 {
+    margin-bottom: 10px;
+    text-align: center;
+} */
+
+.mission-text p {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+.services h2 {
+    text-align: center;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+
+
+
+
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    padding-top: 60px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+
+.map {
+    /* height: 500px; */
+    width: 100%;
+    /* margin-bottom: 20px; */
+}
+
+.mapSize {
+    height: 400px;
+    width: 100%;
+    margin-top: 10px;
+}
+
+
+
+@media (max-width: 1200px) {
+    .navbar a {
+        padding: 10px;
+    }
+
+    .welcome h1 {
+        font-size: 2em;
+    }
+
+    .brief-img, .mission-img {
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 992px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .welcome {
+        width: 70%; 
+    }
+    .card a {
+        max-width: 45%; 
+    }
+    .gallery-img img {
+        max-width: 45%; 
+    }
+}
+@media (max-width: 768px) {
+    .navbar a {
+        margin: 5px; 
+    }
+    .welcome h1 {
+        font-size: 1.8em; 
+    }
+    .card a {
+        max-width: 90%; 
+    }
+    .brief, .mission {
+        flex-direction: column;
+    }
+    .brief p, .mission-text {
+        order: 1; 
+    }
+    .box {
+        flex-direction: column; 
+        align-items: center; 
+    }
+    .box1, .box2, .box3 {
+        width: 80%; 
+        margin-bottom: 20px; 
+        height: auto; 
+    }
+    .userImg {
+        margin-right: 20px; 
+    }
+    .contact {
+        height: auto; 
+        padding: 20px; 
+    }
+    .contactimg1 {
+        display: none; 
+    }
+    .contact-form {
+        width: 80%;
+        margin: 0 10px; 
+    }
+    .footer {
+        flex-direction: column; 
+        padding: 20px;
+        height: auto;
+    }
+
+    .social {
+        margin: 20px 0; 
+        justify-content: center; 
+    }
+
+    .social i {
+        margin-left: 10px; 
+    }
+
+    .footer-data {
+        flex-direction: column; 
+        align-items: center;
+        margin-left: 0;
+    }
+
+    .email h5 {
+        text-align: center; 
+        margin-top: 25px; 
+        margin-left: 20px;
+    }
+
+    .link {
+        margin-left: 0; 
+        text-align: center; 
+        width: 100%; 
+    }
+    .gallery-img img {
+        max-width: 90%; 
+    }
+}
+@media (max-width: 576px) {
+    .navbar {
+        flex-direction: column;
+        padding: 5px; 
+    }
+    .welcome {
+        width: 90%; 
+    }
+    .welcome h1 {
+        font-size: 1.5em; 
+    }
+    .welcome p {
+        font-size: 1em; 
+    }
+    .btn {
+        width: 100%;
+    }
+    .card a {
+        max-width: 100%; 
+        padding: 10px;
+    }
+    .card h3, .card p {
+        font-size: 0.9em; 
+        margin: 5px 0; 
+    }
+    .brief-img, .mission-img {
+        max-width: 100%; 
+    }
+    .contactimg1, .contactimg2 {
+        max-width: 100%; 
+    }
+    .gallery-img img {
+        max-width: 100%; 
+    }
+}
